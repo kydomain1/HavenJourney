@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HavenJourney</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>HavenJourney</h1>
+                    <span class="tagline">Curated Stories for Modern Living</span>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#fashion">Fashion & Accessories</a></li>
+                            <li><a href="index.html#health">Health & Beauty</a></li>
+                            <li><a href="index.html#home">Home & Garden</a></li>
+                            <li><a href="index.html#travel">Travel & Accommodation</a></li>
+                            <li><a href="index.html#finance">Finance & Insurance</a></li>
+                            <li><a href="index.html#food">Food & Beverage</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">Get in Touch</h1>
+            <p class="page-subtitle" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Let's Start a Conversation</h2>
+                    <p>Whether you have a story idea, partnership proposal, or just want to say hello, we're here to listen. Our team typically responds within 24-48 hours.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact@havenjourney.com</p>
+                                <p class="small">We typically respond within 24-48 hours</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h4>Contact Form</h4>
+                                <p>Use the form on this page</p>
+                                <p class="small">The quickest way to reach us</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>Within 24-48 hours</p>
+                                <p class="small">Monday through Friday</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Follow Our Journey</h4>
+                        <div class="social-links-large">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="contribution">Content Contribution</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="press">Press Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Send Message</button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank You!</h3>
+                        <p>Your message has been sent successfully. We'll get back to you soon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-with-us" data-aos="fade-up">
+                <h2>Work With Us</h2>
+                <div class="opportunities-grid">
+                    <div class="opportunity-card">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>Contributing Writers</h3>
+                        <p>Share your expertise and join our community of talented contributors.</p>
+                        <a href="mailto:contact@havenjourney.com?subject=Contributing Writer Inquiry" class="link-arrow">Get in touch <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="opportunity-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Brand Partnerships</h3>
+                        <p>Collaborate with us to reach our engaged and discerning audience.</p>
+                        <a href="mailto:contact@havenjourney.com?subject=Partnership Inquiry" class="link-arrow">Contact us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="opportunity-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Photography & Media</h3>
+                        <p>Showcase your visual storytelling skills through our platform.</p>
+                        <a href="mailto:contact@havenjourney.com?subject=Media Inquiry" class="link-arrow">Send inquiry <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HavenJourney</h3>
+                    <p>Your trusted source for curated content on fashion, beauty, home, travel, finance, and culinary delights.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="index.html">Fashion & Accessories</a></li>
+                        <li><a href="index.html">Health & Beauty</a></li>
+                        <li><a href="index.html">Home & Garden</a></li>
+                        <li><a href="index.html">Travel & Accommodation</a></li>
+                        <li><a href="index.html">Finance & Insurance</a></li>
+                        <li><a href="index.html">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@havenjourney.com</li>
+                        <li><i class="fas fa-paper-plane"></i> <a href="contact.html">Send us a message</a></li>
+                        <li><i class="fas fa-rss"></i> Subscribe to our newsletter</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HavenJourney. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

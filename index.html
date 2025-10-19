@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HavenJourney - Editorial Lifestyle Magazine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>HavenJourney</h1>
+                    <span class="tagline">Curated Stories for Modern Living</span>
+                </div>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                            <li><a href="#" data-category="health">Health & Beauty</a></li>
+                            <li><a href="#" data-category="home">Home & Garden</a></li>
+                            <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                            <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                            <li><a href="#" data-category="food">Food & Beverage</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="search-icon" id="searchIcon">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search articles...">
+            <button class="search-close" id="searchClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main" data-aos="fade-up">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80" alt="Fashion Trends 2025">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <div class="hero-content">
+                        <span class="category-badge fashion">Fashion & Accessories</span>
+                        <h2 class="hero-title">The Ultimate Guide to Sustainable Fashion in 2025</h2>
+                        <p class="hero-excerpt">Discover how eco-conscious brands are revolutionizing the fashion industry with innovative materials and ethical practices.</p>
+                        <div class="meta">
+                            <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <a href="article-1.html" class="btn-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="hero-sidebar">
+                    <div class="hero-small" data-aos="fade-up" data-aos-delay="100">
+                        <div class="hero-image-small">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Travel Destinations">
+                        </div>
+                        <div class="hero-small-content">
+                            <span class="category-badge travel">Travel & Accommodation</span>
+                            <h3>Hidden Gems: 10 Underrated Destinations for Summer 2025</h3>
+                            <span class="date-small">June 22, 2025</span>
+                        </div>
+                    </div>
+                    <div class="hero-small" data-aos="fade-up" data-aos-delay="200">
+                        <div class="hero-image-small">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Home Decor">
+                        </div>
+                        <div class="hero-small-content">
+                            <span class="category-badge home">Home & Garden</span>
+                            <h3>Transform Your Living Space with Biophilic Design</h3>
+                            <span class="date-small">April 10, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-filter">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Stories</button>
+                <button class="filter-btn" data-filter="fashion">Fashion</button>
+                <button class="filter-btn" data-filter="health">Health & Beauty</button>
+                <button class="filter-btn" data-filter="home">Home & Garden</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="food">Food & Beverage</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Article 1 -->
+                <article class="article-card fashion" data-aos="fade-up">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" alt="Sustainable Fashion">
+                        <div class="article-overlay"></div>
+                    </div>
+                    <div class="article-content">
+                        <span class="category-badge fashion">Fashion & Accessories</span>
+                        <h3 class="article-title">The Ultimate Guide to Sustainable Fashion in 2025</h3>
+                        <p class="article-excerpt">Discover how eco-conscious brands are revolutionizing the fashion industry with innovative materials and ethical practices that benefit both people and planet.</p>
+                        <div class="meta">
+                            <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <a href="article-1.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card health" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=800&q=80" alt="Skincare Routine">
+                        <div class="article-overlay"></div>
+                    </div>
+                    <div class="article-content">
+                        <span class="category-badge health">Health & Beauty</span>
+                        <h3 class="article-title">Building Your Perfect Skincare Routine: A Science-Based Approach</h3>
+                        <p class="article-excerpt">Unlock radiant skin with our comprehensive guide to creating a personalized skincare routine backed by dermatological science and real results.</p>
+                        <div class="meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 8, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <a href="article-2.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card home" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Home Interior">
+                        <div class="article-overlay"></div>
+                    </div>
+                    <div class="article-content">
+                        <span class="category-badge home">Home & Garden</span>
+                        <h3 class="article-title">Transform Your Living Space with Biophilic Design Principles</h3>
+                        <p class="article-excerpt">Bring nature indoors and create a harmonious living environment that promotes wellbeing through thoughtful biophilic design elements.</p>
+                        <div class="meta">
+                            <span class="date"><i class="far fa-calendar"></i> April 10, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <a href="article-3.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card travel" data-aos="fade-up" data-aos-delay="300">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80" alt="Travel Destination">
+                        <div class="article-overlay"></div>
+                    </div>
+                    <div class="article-content">
+                        <span class="category-badge travel">Travel & Accommodation</span>
+                        <h3 class="article-title">Hidden Gems: 10 Underrated Destinations for Summer 2025</h3>
+                        <p class="article-excerpt">Escape the tourist crowds and discover breathtaking destinations that offer authentic experiences and unforgettable memories.</p>
+                        <div class="meta">
+                            <span class="date"><i class="far fa-calendar"></i> June 22, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                        <a href="article-4.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card finance" data-aos="fade-up" data-aos-delay="400">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Financial Planning">
+                        <div class="article-overlay"></div>
+                    </div>
+                    <div class="article-content">
+                        <span class="category-badge finance">Finance & Insurance</span>
+                        <h3 class="article-title">Smart Investment Strategies for Young Professionals in 2025</h3>
+                        <p class="article-excerpt">Navigate the evolving financial landscape with expert advice on building wealth, securing your future, and making informed investment decisions.</p>
+                        <div class="meta">
+                            <span class="date"><i class="far fa-calendar"></i> January 18, 2025</span>
+                            <span class="read-time"><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                        <a href="article-5.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" data-aos="fade-up">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Inspired</h2>
+                <p>Subscribe to our newsletter for the latest stories, exclusive content, and curated recommendations delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>HavenJourney</h3>
+                    <p>Your trusted source for curated content on fashion, beauty, home, travel, finance, and culinary delights. We bring you stories that inspire and inform.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                        <li><a href="#" data-category="health">Health & Beauty</a></li>
+                        <li><a href="#" data-category="home">Home & Garden</a></li>
+                        <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                        <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                        <li><a href="#" data-category="food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@havenjourney.com</li>
+                        <li><i class="fas fa-paper-plane"></i> <a href="contact.html">Send us a message</a></li>
+                        <li><i class="fas fa-rss"></i> Subscribe to our newsletter</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HavenJourney. All rights reserved. Designed with passion for editorial excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
