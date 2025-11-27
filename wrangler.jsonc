@@ -1,0 +1,9 @@
+{
+  "name": "havenjourney-site",
+  "compatibility_date": "2025-11-27",
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  }
+}
+
