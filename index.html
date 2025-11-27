@@ -61,45 +61,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-main" data-aos="fade-up">
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80" alt="Fashion Trends 2025">
-                        <div class="hero-overlay"></div>
-                    </div>
-                    <div class="hero-content">
-                        <span class="category-badge fashion">Fashion & Accessories</span>
-                        <h2 class="hero-title">The Ultimate Guide to Sustainable Fashion in 2025</h2>
-                        <p class="hero-excerpt">Discover how eco-conscious brands are revolutionizing the fashion industry with innovative materials and ethical practices.</p>
-                        <div class="meta">
-                            <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
-                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
-                        </div>
-                        <a href="article-1.html" class="btn-primary">Read More</a>
-                    </div>
-                </div>
-                <div class="hero-sidebar">
-                    <div class="hero-small" data-aos="fade-up" data-aos-delay="100">
-                        <div class="hero-image-small">
-                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80" alt="Travel Destinations">
-                        </div>
-                        <div class="hero-small-content">
-                            <span class="category-badge travel">Travel & Accommodation</span>
-                            <h3>Hidden Gems: 10 Underrated Destinations for Summer 2025</h3>
-                            <span class="date-small">June 22, 2025</span>
-                        </div>
-                    </div>
-                    <div class="hero-small" data-aos="fade-up" data-aos-delay="200">
-                        <div class="hero-image-small">
-                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Home Decor">
-                        </div>
-                        <div class="hero-small-content">
-                            <span class="category-badge home">Home & Garden</span>
-                            <h3>Transform Your Living Space with Biophilic Design</h3>
-                            <span class="date-small">April 10, 2025</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-grid" id="heroGrid">
+                <div id="heroMain" class="hero-main" data-aos="fade-up" aria-live="polite"></div>
+                <div id="heroSidebar" class="hero-sidebar" aria-live="polite"></div>
             </div>
         </div>
     </section>
@@ -122,96 +86,8 @@
     <!-- Articles Grid -->
     <section class="articles-section">
         <div class="container">
-            <div class="articles-grid" id="articlesGrid">
-                <!-- Article 1 -->
-                <article class="article-card fashion" data-aos="fade-up">
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" alt="Sustainable Fashion">
-                        <div class="article-overlay"></div>
-                    </div>
-                    <div class="article-content">
-                        <span class="category-badge fashion">Fashion & Accessories</span>
-                        <h3 class="article-title">The Ultimate Guide to Sustainable Fashion in 2025</h3>
-                        <p class="article-excerpt">Discover how eco-conscious brands are revolutionizing the fashion industry with innovative materials and ethical practices that benefit both people and planet.</p>
-                        <div class="meta">
-                            <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
-                            <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
-                        </div>
-                        <a href="article-1.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="article-card health" data-aos="fade-up" data-aos-delay="100">
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=800&q=80" alt="Skincare Routine">
-                        <div class="article-overlay"></div>
-                    </div>
-                    <div class="article-content">
-                        <span class="category-badge health">Health & Beauty</span>
-                        <h3 class="article-title">Building Your Perfect Skincare Routine: A Science-Based Approach</h3>
-                        <p class="article-excerpt">Unlock radiant skin with our comprehensive guide to creating a personalized skincare routine backed by dermatological science and real results.</p>
-                        <div class="meta">
-                            <span class="date"><i class="far fa-calendar"></i> February 8, 2025</span>
-                            <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
-                        </div>
-                        <a href="article-2.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="article-card home" data-aos="fade-up" data-aos-delay="200">
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Home Interior">
-                        <div class="article-overlay"></div>
-                    </div>
-                    <div class="article-content">
-                        <span class="category-badge home">Home & Garden</span>
-                        <h3 class="article-title">Transform Your Living Space with Biophilic Design Principles</h3>
-                        <p class="article-excerpt">Bring nature indoors and create a harmonious living environment that promotes wellbeing through thoughtful biophilic design elements.</p>
-                        <div class="meta">
-                            <span class="date"><i class="far fa-calendar"></i> April 10, 2025</span>
-                            <span class="read-time"><i class="far fa-clock"></i> 7 min read</span>
-                        </div>
-                        <a href="article-3.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="article-card travel" data-aos="fade-up" data-aos-delay="300">
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80" alt="Travel Destination">
-                        <div class="article-overlay"></div>
-                    </div>
-                    <div class="article-content">
-                        <span class="category-badge travel">Travel & Accommodation</span>
-                        <h3 class="article-title">Hidden Gems: 10 Underrated Destinations for Summer 2025</h3>
-                        <p class="article-excerpt">Escape the tourist crowds and discover breathtaking destinations that offer authentic experiences and unforgettable memories.</p>
-                        <div class="meta">
-                            <span class="date"><i class="far fa-calendar"></i> June 22, 2025</span>
-                            <span class="read-time"><i class="far fa-clock"></i> 12 min read</span>
-                        </div>
-                        <a href="article-4.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="article-card finance" data-aos="fade-up" data-aos-delay="400">
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Financial Planning">
-                        <div class="article-overlay"></div>
-                    </div>
-                    <div class="article-content">
-                        <span class="category-badge finance">Finance & Insurance</span>
-                        <h3 class="article-title">Smart Investment Strategies for Young Professionals in 2025</h3>
-                        <p class="article-excerpt">Navigate the evolving financial landscape with expert advice on building wealth, securing your future, and making informed investment decisions.</p>
-                        <div class="meta">
-                            <span class="date"><i class="far fa-calendar"></i> January 18, 2025</span>
-                            <span class="read-time"><i class="far fa-clock"></i> 9 min read</span>
-                        </div>
-                        <a href="article-5.html" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
+            <div class="articles-grid" id="articlesGrid" aria-live="polite">
+                <!-- Articles generated dynamically -->
             </div>
 
             <!-- Pagination -->
@@ -290,6 +166,7 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="data/articles.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

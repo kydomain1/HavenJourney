@@ -2,7 +2,9 @@
 // HavenJourney - Main JavaScript
 // ===================================
 
-// Initialize AOS (Animate On Scroll)
+let articlesData = [];
+
+// Initialize AOS (Animate On Scroll) and load articles
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
         duration: 800,
@@ -10,7 +12,111 @@ document.addEventListener('DOMContentLoaded', function() {
         once: true,
         offset: 100
     });
+
+    hydrateHomepageArticles();
 });
+
+function hydrateHomepageArticles() {
+    const heroMain = document.getElementById('heroMain');
+    const heroSidebar = document.getElementById('heroSidebar');
+    const articlesGrid = document.getElementById('articlesGrid');
+
+    const rawArticles = Array.isArray(window.__HAVENJOURNEY_ARTICLES__) ? window.__HAVENJOURNEY_ARTICLES__ : [];
+
+    articlesData = rawArticles
+        .filter(article => article && article.title && article.url)
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    if (!articlesData.length) {
+        if (heroMain) {
+            heroMain.innerHTML = `
+                <div class="hero-content">
+                    <h2 class="hero-title">No stories available yet</h2>
+                    <p class="hero-excerpt">Please check back soon for freshly curated features.</p>
+                </div>
+            `;
+        }
+        if (articlesGrid) {
+            articlesGrid.innerHTML = `
+                <div class="article-card" style="flex-direction: column; align-items: flex-start;">
+                    <p style="margin: 0;">We&apos;re preparing new stories for you. Refresh later to discover them.</p>
+                </div>
+            `;
+        }
+        return;
+    }
+
+    renderHeroSection(heroMain, heroSidebar, articlesData);
+    renderArticlesGrid(articlesGrid, articlesData);
+    attachCardHoverEffects();
+    AOS.refresh();
+}
+
+function renderHeroSection(heroMain, heroSidebar, articles) {
+    if (!heroMain || !heroSidebar || !articles.length) return;
+
+    const [featured, ...rest] = articles;
+
+    heroMain.innerHTML = `
+        <div class="hero-image">
+            <img src="${featured.heroImage}" alt="${featured.title}">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <span class="category-badge ${featured.categorySlug}">${featured.category}</span>
+            <h2 class="hero-title">${featured.title}</h2>
+            <p class="hero-excerpt">${featured.summary}</p>
+            <div class="meta">
+                <span class="date"><i class="far fa-calendar"></i> ${featured.displayDate}</span>
+                <span class="read-time"><i class="far fa-clock"></i> ${featured.readTime}</span>
+            </div>
+            <a href="${featured.url}" class="btn-primary">Read More</a>
+        </div>
+    `;
+
+    heroSidebar.innerHTML = rest.slice(0, 2).map((article, index) => `
+        <div class="hero-small" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}">
+            <div class="hero-image-small">
+                <img src="${article.heroImage}" alt="${article.title}">
+            </div>
+            <div class="hero-small-content">
+                <span class="category-badge ${article.categorySlug}">${article.category}</span>
+                <h3>${article.title}</h3>
+                <span class="date-small">${article.displayDate}</span>
+            </div>
+        </div>
+    `).join('');
+}
+
+function renderArticlesGrid(grid, articles) {
+    if (!grid) return;
+
+    if (!articles.length) {
+        grid.innerHTML = '<p>No articles available yet. Check back soon!</p>';
+        return;
+    }
+
+    grid.innerHTML = articles.map((article, index) => `
+        <article class="article-card ${article.categorySlug}" data-aos="fade-up" data-aos-delay="${(index % 5) * 100}">
+            <div class="article-image">
+                <img src="${article.cardImage}" alt="${article.title}">
+                <div class="article-overlay"></div>
+            </div>
+            <div class="article-content">
+                <span class="category-badge ${article.categorySlug}">${article.category}</span>
+                <h3 class="article-title">${article.title}</h3>
+                <p class="article-excerpt">${article.excerpt}</p>
+                <div class="meta">
+                    <span class="date"><i class="far fa-calendar"></i> ${article.displayDate}</span>
+                    <span class="read-time"><i class="far fa-clock"></i> ${article.readTime}</span>
+                </div>
+                <a href="${article.url}" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+    `).join('');
+
+    AOS.refreshHard();
+}
 
 // ===================================
 // Mobile Navigation Toggle
@@ -59,44 +165,7 @@ const searchClose = document.getElementById('searchClose');
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 
-// Sample articles data for search
-const articles = [
-    {
-        title: 'The Ultimate Guide to Sustainable Fashion in 2025',
-        url: 'article-1.html',
-        category: 'Fashion & Accessories',
-        excerpt: 'Discover how eco-conscious brands are revolutionizing the fashion industry...',
-        date: 'March 15, 2025'
-    },
-    {
-        title: 'Building Your Perfect Skincare Routine: A Science-Based Approach',
-        url: 'article-2.html',
-        category: 'Health & Beauty',
-        excerpt: 'Unlock radiant skin with our comprehensive guide to creating a personalized skincare routine...',
-        date: 'February 8, 2025'
-    },
-    {
-        title: 'Transform Your Living Space with Biophilic Design Principles',
-        url: 'article-3.html',
-        category: 'Home & Garden',
-        excerpt: 'Bring nature indoors and create a harmonious living environment...',
-        date: 'April 10, 2025'
-    },
-    {
-        title: 'Hidden Gems: 10 Underrated Destinations for Summer 2025',
-        url: 'article-4.html',
-        category: 'Travel & Accommodation',
-        excerpt: 'Escape the tourist crowds and discover breathtaking destinations...',
-        date: 'June 22, 2025'
-    },
-    {
-        title: 'Smart Investment Strategies for Young Professionals in 2025',
-        url: 'article-5.html',
-        category: 'Finance & Insurance',
-        excerpt: 'Navigate the evolving financial landscape with expert advice...',
-        date: 'January 18, 2025'
-    }
-];
+initializeSearch();
 
 // Open search overlay
 if (searchIcon) {
@@ -124,22 +193,32 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Search functionality
-if (searchInput) {
+function initializeSearch() {
+    if (!searchInput) return;
+
     searchInput.addEventListener('input', function(e) {
         const query = e.target.value.toLowerCase().trim();
-        
+
         if (query.length < 2) {
             searchResults.innerHTML = '';
             return;
         }
-        
-        const results = articles.filter(article => {
+
+        if (!articlesData.length) {
+            searchResults.innerHTML = `
+                <div style="text-align: center; padding: 2rem; background: white; color: var(--color-gray);">
+                    <p>Loading articles, please try again in a moment.</p>
+                </div>
+            `;
+            return;
+        }
+
+        const results = articlesData.filter(article => {
             return article.title.toLowerCase().includes(query) ||
                    article.excerpt.toLowerCase().includes(query) ||
                    article.category.toLowerCase().includes(query);
         });
-        
+
         displaySearchResults(results, query);
     });
 }
@@ -179,7 +258,8 @@ function displaySearchResults(results, query) {
 }
 
 function highlightText(text, query) {
-    const regex = new RegExp(`(${query})`, 'gi');
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
     return text.replace(regex, '<strong style="background: rgba(212, 135, 75, 0.2); color: var(--color-primary);">$1</strong>');
 }
 
@@ -188,19 +268,15 @@ function highlightText(text, query) {
 // ===================================
 
 const filterButtons = document.querySelectorAll('.filter-btn');
-const articleCards = document.querySelectorAll('.article-card');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', function() {
-        // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        
-        // Add active class to clicked button
         this.classList.add('active');
-        
+
         const filter = this.getAttribute('data-filter');
-        
-        // Filter articles
+        const articleCards = document.querySelectorAll('.article-card');
+
         articleCards.forEach(card => {
             if (filter === 'all' || card.classList.contains(filter)) {
                 card.style.display = 'flex';
@@ -216,8 +292,7 @@ filterButtons.forEach(button => {
                 }, 300);
             }
         });
-        
-        // Reinitialize AOS
+
         AOS.refresh();
     });
 });
@@ -267,8 +342,8 @@ pageButtons.forEach(button => {
             articlesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
-        // In a real application, this would load new articles
-        // For now, we'll just show a smooth transition
+        const articleCards = document.querySelectorAll('.article-card');
+
         articleCards.forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
@@ -528,13 +603,15 @@ shareButtons.forEach(button => {
 // Article Card Hover Effects
 // ===================================
 
-const cards = document.querySelectorAll('.article-card, .product-card, .related-card');
-
-cards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transition = 'all 0.3s ease';
+function attachCardHoverEffects(scope = document) {
+    scope.querySelectorAll('.article-card, .product-card, .related-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transition = 'all 0.3s ease';
+        });
     });
-});
+}
+
+attachCardHoverEffects();
 
 // ===================================
 // Back to Top Button (Optional)
