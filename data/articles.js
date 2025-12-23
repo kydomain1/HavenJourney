@@ -2,7 +2,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 1,
     title: 'The Ultimate Guide to Sustainable Fashion in 2025',
-    url: 'article-1.html',
+    url: 'the-ultimate-guide-to-sustainable-fashion-in-2025.html',
     category: 'Fashion & Accessories',
     categorySlug: 'fashion',
     excerpt: 'Discover how eco-conscious brands are revolutionizing the fashion industry with innovative materials and ethical practices that benefit both people and planet.',
@@ -16,7 +16,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 2,
     title: 'Building Your Perfect Skincare Routine: A Science-Based Approach',
-    url: 'article-2.html',
+    url: 'building-your-perfect-skincare-routine-a-science-based-approach.html',
     category: 'Health & Beauty',
     categorySlug: 'health',
     excerpt: 'Unlock radiant skin with our comprehensive guide to creating a personalized skincare routine backed by dermatological science and real results.',
@@ -30,7 +30,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 3,
     title: 'Transform Your Living Space with Biophilic Design Principles',
-    url: 'article-3.html',
+    url: 'transform-your-living-space-with-biophilic-design-principles.html',
     category: 'Home & Garden',
     categorySlug: 'home',
     excerpt: 'Bring nature indoors and create a harmonious living environment that promotes wellbeing through thoughtful biophilic design elements.',
@@ -44,7 +44,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 4,
     title: 'Hidden Gems: 10 Underrated Destinations for Summer 2025',
-    url: 'article-4.html',
+    url: 'hidden-gems-10-underrated-destinations-for-summer-2025.html',
     category: 'Travel & Accommodation',
     categorySlug: 'travel',
     excerpt: 'Escape the tourist crowds and discover breathtaking destinations that offer authentic experiences and unforgettable memories.',
@@ -58,7 +58,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 5,
     title: 'Smart Investment Strategies for Young Professionals in 2025',
-    url: 'article-5.html',
+    url: 'smart-investment-strategies-for-young-professionals-in-2025.html',
     category: 'Finance & Insurance',
     categorySlug: 'finance',
     excerpt: 'Navigate the evolving financial landscape with expert advice on building wealth, securing your future, and making informed investment decisions.',
@@ -72,7 +72,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 6,
     title: 'Your Ticket to Live Events',
-    url: 'article-6.html',
+    url: 'your-ticket-to-live-events.html',
     category: 'Travel & Accommodation',
     categorySlug: 'travel',
     excerpt: 'Unlock premium seats, flexible upgrades, and globe-spanning experiences with one savvy ticket marketplace made for spontaneous travelers.',
@@ -86,7 +86,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 7,
     title: 'Buy & Sell Tickets with Confidence',
-    url: 'article-7.html',
+    url: 'buy-sell-tickets-with-confidence.html',
     category: 'Travel & Accommodation',
     categorySlug: 'travel',
     excerpt: 'Navigate buying and selling season tickets with smart filters, price alerts, and global protections built for modern fans.',
@@ -100,7 +100,7 @@ window.__HAVENJOURNEY_ARTICLES__ = [
   {
     id: 8,
     title: 'Collaborate with Creators Easily',
-    url: 'collaborate-with-creators(3).html',
+    url: 'collaborate-with-creators-easily.html',
     category: 'Finance & Insurance',
     categorySlug: 'finance',
     excerpt: 'Learn how TikTok Business Center helps brands and creators work together smoothly, unify assets in one place, and use clear performance data to grow faster, together.',
