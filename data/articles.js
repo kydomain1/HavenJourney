@@ -90,12 +90,26 @@ window.__HAVENJOURNEY_ARTICLES__ = [
     category: 'Travel & Accommodation',
     categorySlug: 'travel',
     excerpt: 'Navigate buying and selling season tickets with smart filters, price alerts, and global protections built for modern fans.',
-    summary: 'Master viagogo’s marketplace tools to secure or resell seats with total confidence this October.',
+    summary: 'Master viagogo\'s marketplace tools to secure or resell seats with total confidence this October.',
     date: '2025-10-05',
     displayDate: 'October 5, 2025',
     readTime: '8 min read',
     heroImage: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80',
     cardImage: 'https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?w=800&q=80'
+  },
+  {
+    id: 8,
+    title: 'Collaborate with Creators Easily',
+    url: 'collaborate-with-creators(3).html',
+    category: 'Finance & Insurance',
+    categorySlug: 'finance',
+    excerpt: 'Learn how TikTok Business Center helps brands and creators work together smoothly, unify assets in one place, and use clear performance data to grow faster, together.',
+    summary: 'Learn how TikTok Business Center helps brands and creators work together smoothly, unify assets in one place, and use clear performance data to grow faster, together.',
+    date: '2025-10-03',
+    displayDate: 'October 3, 2025',
+    readTime: '9 min read',
+    heroImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=700&fit=crop',
+    cardImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1000&h=700&fit=crop'
   }
 ];
 
