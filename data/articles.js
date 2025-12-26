@@ -110,6 +110,20 @@ window.__HAVENJOURNEY_ARTICLES__ = [
     readTime: '9 min read',
     heroImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=700&fit=crop',
     cardImage: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1000&h=700&fit=crop'
+  },
+  {
+    id: 9,
+    title: 'Book Your Next Intercity Trip in Just Two Clicks',
+    url: 'book-your-next-intercity-trip-in-just-two-clicks.html',
+    category: 'Travel & Accommodation',
+    categorySlug: 'travel',
+    excerpt: 'Discover how modern booking platforms have revolutionized intercity travel, allowing you to secure your next journey in just two clicks. Experience the simplicity of streamlined bus booking with platforms like Buser.',
+    summary: 'Discover how modern booking platforms have revolutionized intercity travel with simple two-click booking.',
+    date: '2025-10-01',
+    displayDate: 'October 1, 2025',
+    readTime: '7 min read',
+    heroImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1400&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80'
   }
 ];
 
