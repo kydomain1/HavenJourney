@@ -1,5 +1,19 @@
 window.__HAVENJOURNEY_ARTICLES__ = [
   {
+    id: 10,
+    title: 'Ultimate Guide to MyMedic First Aid Kits',
+    url: 'ultimate-guide-to-mymedic-first-aid-kits.html',
+    category: 'Health & Beauty',
+    categorySlug: 'health',
+    excerpt: 'Discover professional-grade first aid kits from MyMedic designed for everything from everyday emergencies to extreme outdoor adventures. Learn what makes these kits stand out and how to choose the right one for your needs.',
+    summary: 'Professional-grade first aid kits from MyMedic for everyday emergencies and outdoor adventures.',
+    date: '2025-12-03',
+    displayDate: 'December 3, 2025',
+    readTime: '7 min read',
+    heroImage: 'image/1.png',
+    cardImage: 'image/1.png'
+  },
+  {
     id: 1,
     title: 'The Ultimate Guide to Sustainable Fashion in 2025',
     url: 'the-ultimate-guide-to-sustainable-fashion-in-2025.html',
