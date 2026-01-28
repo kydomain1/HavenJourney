@@ -1,5 +1,19 @@
 window.__HAVENJOURNEY_ARTICLES__ = [
   {
+    id: 11,
+    title: 'Trusted by Millions of Gamers',
+    url: 'trusted-by-millions-of-gamers.html',
+    category: 'Finance & Insurance',
+    categorySlug: 'finance',
+    excerpt: 'Discover why CDKeys has become the trusted platform for millions of gamers worldwide. Explore their extensive library of digital game keys, competitive pricing, and commitment to security across all major gaming platforms.',
+    summary: 'CDKeys offers reliable digital game keys and gaming services trusted by millions of gamers worldwide.',
+    date: '2025-12-05',
+    displayDate: 'December 5, 2025',
+    readTime: '8 min read',
+    heroImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&q=80',
+    cardImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=80'
+  },
+  {
     id: 10,
     title: 'Ultimate Guide to MyMedic First Aid Kits',
     url: 'ultimate-guide-to-mymedic-first-aid-kits.html',
